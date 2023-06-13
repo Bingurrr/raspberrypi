@@ -1,11 +1,13 @@
 from cgi import parse_qs
 from template import html
 import matplotlib.pyplot as plt
+import matplotlib as mpl
+mpl.use('Agg')
 
 def application(environ, start_response):
     if environ['PATH_INFO'] == '/graph.png':
         try:
-            with open('graph.png', 'rb') as f:
+            wimatplotlib as  th open('graph.png', 'rb') as f:
                 response_body = f.read()
         except:
             response_body = ''
